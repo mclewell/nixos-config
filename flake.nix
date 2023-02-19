@@ -28,7 +28,7 @@
       specialArgs = { inherit inputs; };
         modules = [ ./hosts/vm-nixos ];
       };
-      lpatop = nixpkgs.lib.nixosSystem {
+      thinkpad = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
         modules = [ ./hosts/thinkpad ];
       };
