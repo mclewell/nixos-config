@@ -5,7 +5,7 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/nvme0p1";
+    { device = "/dev/nvme0n1p1";
       fsType = "vfat";
     };
 
@@ -34,7 +34,7 @@
 
   boot.initrd.luks.devices = {
     crypt-root = {
-      device = "/dev/nvme0p2";
+      device = "/dev/nvme0n1p2";
       allowDiscards = true;
       preLVM = true;
     };
