@@ -13,12 +13,7 @@
     nur.url = "github:nix-community/NUR";
     #nur.inputs.nixpkgs.follows = "nixpkgs";
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
-
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    hardware.url = "github:nixos/nixos-hardware";
   };
 
   outputs = { self, nixpkgs, home-manager, nur, ... }@inputs: 
