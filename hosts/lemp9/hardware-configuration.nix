@@ -13,6 +13,11 @@
     [ { device = "/dev/mapper/vg00-swap"; }
     ];
 
+  fileSystems."/mnt/data" =
+    { device = "/dev/mapper/crypt-data";
+      fsType = "ext4";
+    };
+
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
     initrd.kernelModules = [ "dm-snapshot" ];
@@ -37,6 +42,10 @@
       device = "/dev/nvme0n1p2";
       allowDiscards = true;
       preLVM = true;
+    };
+    crypt-data = {
+      device = "/dev/sda1";
+      allowDiscards = true;
     };
   };
 
