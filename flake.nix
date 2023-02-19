@@ -32,7 +32,10 @@
       specialArgs = { inherit inputs; };
         modules = [ ./hosts/thinkpad ];
       };
-
+      lemp9 = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+        modules = [ ./hosts/lemp9 ];
+      };
     };
 
     homeConfigurations = {
@@ -60,7 +63,18 @@
           ./home/matthew/thinkpad.nix 
         ];
       };
+      "matthew@lemp9" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ({
+            nixpkgs.overlays = [
+              nur.overlay
+            ];
+          })
+          ./home/matthew/lemp9.nix
+        ];
+      };
     };
   };
-
 }
