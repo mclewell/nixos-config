@@ -7,7 +7,7 @@
     matchBlocks = {
       "github.com" = {
         Hostname = "github.com";
-        identityFile = "~/.ssh/id_ed25519"
+        identityFile = "~/.ssh/id_ed25519";
       };
     };
   };
