@@ -49,4 +49,6 @@
     gptfdisk
     git
   ];
+
+  services.fwupd.enable = true;
 }
