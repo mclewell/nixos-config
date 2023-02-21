@@ -16,7 +16,10 @@
         enabled-extensions = ["launch-new-instance@gnome-shell-extensions.gcampax.github.com" "appindicatorsupport@rgcjonas.gmail.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com"];
         favorite-apps = ["firefox.desktop" "org.gnome.Geary.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "spotify.desktop" "steam.desktop"];
       };
-      "org/gnome/desktop/interface".enable-hot-corners = false;
+      "org/gnome/desktop/interface" = {
+        enable-hot-corners = false;
+        gtk-theme = "Adwaita-dark";
+      };
       "org/gtk/settings/file-chooser".sort-directories-first = true;
       "org/gnome/desktop/wm/preferences".button-layout = "appmenu:minimize,maximize,close";
       "org/gnome/desktop/peripherals/mouse".accel-profile = "flat";

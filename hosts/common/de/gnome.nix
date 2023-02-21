@@ -25,6 +25,7 @@
     gnome.gnome-tweaks
     gnome.dconf-editor
     gnomeExtensions.appindicator
+    gnome.gnome-themes-extra
   ];
 
   # Remove unnecessary packages that come with the default Gnome enviornment
